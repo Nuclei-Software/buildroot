@@ -136,7 +136,7 @@ copy_toolchain_sysroot = \
 		done ; \
 	fi ; \
 	if [ "$(TOOLCHAIN_EXTERNAL_READELF)" != "" ]; then \
-		LD_NAME=`$(TOOLCHAIN_EXTERNAL_READELF) -d $${ARCH_SYSROOT_DIR}$${ARCH_LIB_DIR}/libc-*.so|grep ld-linux|grep so|awk '{print $$NF}'|sed "s/\[//g"|sed "s/\]//g"`; \
+		LD_NAME=`$(TOOLCHAIN_EXTERNAL_READELF) -d $${ARCH_SYSROOT_DIR}$${ARCH_LIB_DIR}/libc.so.*|grep ld-linux|grep so|awk '{print $$NF}'|sed "s/\[//g"|sed "s/\]//g"`; \
 	else \
 		LD_NAME="ld*.so.*"; \
 	fi; \
