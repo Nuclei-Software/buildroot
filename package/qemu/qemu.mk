@@ -41,7 +41,7 @@ QEMU_DEPENDENCIES = \
 # not automatically pulled. :-(
 QEMU_LIBS = -lrt -lm
 
-QEMU_OPTS =
+QEMU_OPTS = --enable-virtfs
 
 QEMU_VARS = LIBTOOL=$(HOST_DIR)/bin/libtool
 
